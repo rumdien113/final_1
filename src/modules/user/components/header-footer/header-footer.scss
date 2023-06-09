@@ -1,0 +1,17 @@
+@import '../../../../global.scss';
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
+
+.color-1 {
+  background-color: $color-1;
+}
+.color-2 {
+  background-color: $color-2;
+}
+header {
+  .gr-1 {
+    span {
+      font-family: "Audiowide", cursive;
+	    color: #ff5555;
+    }
+  }
+}
