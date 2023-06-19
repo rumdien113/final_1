@@ -1,8 +1,8 @@
 import { ChakraProvider, extendTheme } from "@chakra-ui/react"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import UseRoutes from "./user/user.routes"
-import LoginPage from './user/auth/login.auth'
-import RegisterPage from './user/auth/register.auth'
+import Login from './user/auth/register.auth'
+import Register from './user/auth/login.auth'
 const theme = extendTheme({
     component: {
         Popover : {
@@ -23,8 +23,8 @@ const ModuleRoutes = () => {
             <ChakraProvider theme={theme}>
                 <Routes>
                     <Route path="/*" element={<UseRoutes />}/>
-                    <Route path="/dang-nhap" element={<LoginPage />}/>
-                    <Route path="/dang-ki" element={<RegisterPage />}/>
+                    <Route path="/dang-nhap" element={<Login />}/>
+                    <Route path="/dang-ky" element={<Register />}/>
                 </Routes>
             </ChakraProvider>
         </BrowserRouter>

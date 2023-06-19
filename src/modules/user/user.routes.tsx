@@ -6,6 +6,7 @@ import Learn from "./learn/page.learn";
 import Tutorial from './tutorial/page.tutorial'
 import Share from "./share/page.share";
 import Qa from "./ques-ans/page.qa";
+import LessonRoutes from "./lesson/lesson.routes";
 
 const UserRoutes = () => {
     return (
@@ -13,7 +14,9 @@ const UserRoutes = () => {
             <Header />
             <div className="wrap-user pt-12 lg:pt-0">
                 <Routes>
+                    <Route path="/*" element={<LessonRoutes />} />
                     <Route path="/" element={<HomePage />} />
+                    <Route path="/home-page" element={<HomePage />} />
                     <Route path="/hoc-tap" element={<Learn />}/>
                     <Route path="/tutorial" element={<Tutorial />} />
                     <Route path="/chia-se" element={<Share />} />

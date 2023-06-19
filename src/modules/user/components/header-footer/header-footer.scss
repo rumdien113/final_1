@@ -1,12 +1,7 @@
 @import '../../../../global.scss';
-@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
+$color-1: rgb(25, 28, 38);
+$color-2: rgb(17, 19, 25);
 
-.color-1 {
-  background-color: $color-1;
-}
-.color-2 {
-  background-color: $color-2;
-}
 header {
   .gr-1 {
     span {

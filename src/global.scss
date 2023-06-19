@@ -1,12 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-$color-1: #191c26;
-$color-2: #111319;
-$font-style: 'Poppins', sans-serif;
+$bg-color-1: #191c26;
+$bg-color-2: #111319;
+$bg-color-3: #1f232b;
+$font-poppins: 'Poppins', sans-serif;
+$font-inter: 'Inter', sans-serif;
 
+.bg-color-1 {
+  background-color: $bg-color-1;
+}
+
+.bg-color-2 {
+  background-color: $bg-color-2;
+}
+
+.bg-color-3 {
+  background-color: $bg-color-3;
+}
+
+.font-inter {
+  font-family: $font-inter;
+}
 * { 
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+

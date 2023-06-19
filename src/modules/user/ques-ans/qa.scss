@@ -1,0 +1,21 @@
+@import '../../../global.scss';
+
+@media (min-width: 1024px) {
+    .quest {
+        display: block;
+        flex: 0 0 66.66666667%;
+        max-width: 66.66666667%;
+    }
+}
+@media (min-width: 768px) {
+    .quest {
+        display: block;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+@media (min-width: 300px) {
+    .tag {
+        display: hidden;
+    }
+}

@@ -10,6 +10,7 @@ import GitHubIcon from '@mui/icons-material/GitHub'
 import { useState } from 'react'
 import { useToast } from '@chakra-ui/react'
 import { isEmail } from '../../../../utils/validate'
+import React from 'react'
 
 const links: INavLink[] = [
     { directory: '/', title: 'Trang chủ' },
@@ -75,7 +76,7 @@ const Footer = () => {
         }
     }
     return (
-        <footer className="min-w-screen color-1">
+        <footer className="min-w-screen bg-color-2">
             <div className="container mx-auto text-white lg:grid lg:grid-cols-3 lg:gap-8 py-5 px-6 flex flex-col justify-center items-center space-y-6">
                 <div className="gr-1 flex flex-col items-center lg:block font-1 space-y-2 text-sm">
                     <NavLink to={`/`}>
@@ -112,8 +113,8 @@ const Footer = () => {
                     <div className="gr-follow-me flex flex-col items-center lg:block">
                         <label>Theo dõi tin tức của chúng tôi</label>
                         <div className="gr-input relative inline-block pl-1">
-                            <input type="text" placeholder='Nhập email của bạn' className='color-custom-1 text-sm text-neutral-700 w-64 h-10 rounded-2xl outline-none pl-4' onChange={(e: any) => { setEmail(e.target.value) }} />
-                            <button className='btn-register-footer color-1 w-20 h-10 absolute right-0 rounded-2xl hover:scale-105 transition-all text-sm font-1' onClick={handleSubmit}>Đăng kí</button>
+                            <input type="text" placeholder='Nhập email của bạn' className='text-sm text-neutral-700 w-64 h-10 rounded-2xl outline-none pl-4' onChange={(e: any) => { setEmail(e.target.value) }} />
+                            <button className='btn-register-footer bg-color-1 w-20 h-10 absolute right-0 rounded-2xl hover:scale-105 transition-all text-sm font-1' onClick={handleSubmit}>Đăng kí</button>
                         </div>
                     </div>
                 </div>
