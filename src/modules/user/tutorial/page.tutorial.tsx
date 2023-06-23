@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { IndexRouteObject, NavLink } from 'react-router-dom';
 import C from "../../../assets/images/tutorial/c.png"
 import CPP from '../../../assets/images/tutorial/cpp.png';
 import JAVA from '../../../assets/images/tutorial/java.png';
@@ -15,17 +15,16 @@ export interface INavLink {
 }
 
 const links1: INavLink[] = [
-	{ directory: '/c', title: 'C', image: C },
-	{ directory: '/python', title: 'Python', image: PY },
-	{ directory: '/cpp', title: 'C++', image: CPP },
-	{ directory: '/java', title: 'java', image: JAVA },
-	{ directory: '/js', title: 'javascript', image: JS }
+	{ directory: '/C', title: 'C', image: C },
+	{ directory: '/Python', title: 'Python', image: PY },
+	{ directory: '/Cpp', title: 'C++', image: CPP },
+	{ directory: '/Java', title: 'Java', image: JAVA },
+	{ directory: '/Javascript', title: 'Javascript', image: JS }
 ]
 
 const links2: INavLink[] = [
-	{ directory: '/js', title: 'javascript', image: JS },
-	{ directory: '/html', title: 'html', image: HTML },
-	{ directory: '/css', title: 'css', image: CSS },
+	{ directory: '/Javascript', title: 'Javascript', image: JS },
+	{ directory: '/HTML', title: 'HTML', image: HTML },
 ]
 
 const Tutorial = () => {
@@ -38,8 +37,10 @@ const Tutorial = () => {
 					{links1.map((navLink: INavLink, index: number) => {
 						return (
 							<NavLink
+								// onClick={}
+								key={index}
 								end={index === 0 ? true : false}
-								to={navLink.directory}
+								to={`/tutorial${navLink.directory}`}
 								className='flex flex-col justify-center items-center py-12 font-medium text-xl text-white w-72 border rounded-2xl bg-color-1 mb-5 mx-5'
 							>
 								<img
@@ -61,8 +62,9 @@ const Tutorial = () => {
 					{links2.map((navLink: INavLink, index: number) => {
 						return (
 							<NavLink
+								key={index}
 								end={index === 0 ? true : false}
-								to={navLink.directory}
+								to={`/tutorial/${navLink.directory}`}
 								className='flex flex-col justify-center items-center py-12 font-medium text-xl text-white w-72 border rounded-2xl bg-color-1 mb-5 mx-5'
 							>
 								<img

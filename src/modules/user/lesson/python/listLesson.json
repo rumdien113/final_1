@@ -1,4 +1,6 @@
 {
+    "id": 1,
+    "name": "Python",
     "chapter" : [
         {
             "title" : "Bài 1: Giới thiệu về lập trình python",

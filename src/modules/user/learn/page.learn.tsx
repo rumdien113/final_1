@@ -16,8 +16,8 @@ export interface INavLink {
 const links: INavLink[] = [
     { directory: '/lap-trinh-c', title: 'C', img: c },
     { directory: '/lap-trinh-c++', title: 'C++', img: cpp },
-    { directory: '/lap-trinh-python', title: 'python', img: python },
-    { directory: '/lap-trinh-java', title: 'java', img: java },
+    { directory: '/lap-trinh-python', title: 'Python', img: python },
+    { directory: '/lap-trinh-java', title: 'Java', img: java },
     { directory: '/lap-trinh-js', title: 'Javascript', img: js },
     { directory: '/lap-trinh-html-css', title: 'HTML-CSS', img: html },
 ]
@@ -29,17 +29,17 @@ const Learn = () => {
             <div className="title pt-32">
                 <p className="text-4xl font-extrabold text-start text-white ">Các khóa học phổ biến nhất</p>
             </div>
-            <div className="list pt-20 grid ms:grid-cols-1 lg:grid-cols-3 items-center">
+            <div className="list pt-20 grid ms:grid-cols-1 lg:grid-cols-3 items-center gap-3.5">
                 {links.map((navlink: INavLink, index: number) => {
                     return (
-                        <div className="card p-6 max-w-sm mx-auto rounded-xl shadow-lg mb-16 bg-color-2">
+                        <div className="card p-6 max-w-sm mx-auto rounded-xl shadow-lg mb-16 bg-color-2 ">
                             <NavLink
                                 end={index === 0 ? true : false}
                                 to={navlink.directory}
                                 // className="object-cover w-2/5"
                             >
-                                <img src={navlink.img} alt={navlink.title} className="mb-8 h-48 w-96"/>
-                                <p className="text-2xl font-semibold">Lập trình {navlink.title} cơ bản</p>
+                                <img src={navlink.img} alt={navlink.title} className="mb-8 object-fill h-48 w-96"/>
+                                <p className="text-xl font-semibold">Lập trình {navlink.title} cơ bản</p>
                             </NavLink>
                         </div>
                     )

@@ -9,8 +9,8 @@ const Share = () => {
                 <div className='blog md:w-full lg:w-9/12'>
                     <div className="item -mt-8">
                         {blog.map((item) => {
-                            return <div className='bg-color-2 flex border-solid rounded border-slate-700 border-2 mt-8 py-2 px-1 cursor-pointer'>
-                                <img src={item.imgURL} alt="blog" className='blog-image h-60 w-2/3 object-cover rounded-lg mx-2'/>
+                            return <div className='bg-color-2 flex border-solid rounded border-slate-700 border-2 mt-8 py-2 px-2 cursor-pointer'>
+                                <img src={item.imgURL} alt="blog" className='blog-image h-60 w-1/4 object-cover rounded-lg mx-2'/>
                                 <div className='description'>
                                     <p className='font-bold text-3xl mb-3'>{item.title}</p>
                                     <p className='font-semibold text-base text-blue-500 mb-1.5'>{item.author}</p>
