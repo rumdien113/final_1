@@ -40,6 +40,7 @@ const Detail = () => {
                             <li className='py-3 hover:text-rose-600'>
                               <NavLink to={lesson.directory}>
                                 {lesson.subtitle}
+// dùng 1 handleOnClick để setState lưu 1 str là directory của lesson
                               </NavLink>
                             </li>
                           </ol>
@@ -53,6 +54,7 @@ const Detail = () => {
           );
         }
         // return null; // Cần có return null nếu không có phần tử phù hợp
+      // map lại để tìm khoá học vs state đã lưu
       })}
     </section>
   )
