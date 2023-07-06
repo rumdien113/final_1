@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import tag from './dttag.json'
 import blog from './share'
 
@@ -9,15 +10,20 @@ const Share = () => {
                 <div className='blog md:w-full lg:w-9/12'>
                     <div className="item -mt-8">
                         {blog.map((item) => {
-                            return <div className='bg-color-2 flex border-solid rounded border-slate-700 border-2 mt-8 py-2 px-2 cursor-pointer'>
-                                <img src={item.imgURL} alt="blog" className='blog-image h-60 w-1/4 object-cover rounded-lg mx-2'/>
-                                <div className='description'>
-                                    <p className='font-bold text-3xl mb-3'>{item.title}</p>
-                                    <p className='font-semibold text-base text-blue-500 mb-1.5'>{item.author}</p>
-                                    <p className='font-normal text-base mb-2'>{item.description}</p>
-                                    <p className='text-slate-500'>{item.date}</p>
-                                </div>
-                            </div>
+                            return (
+                                <NavLink 
+                                    className='bg-color-2 flex border-solid rounded border-slate-700 border-2 mt-8 py-2 px-2 cursor-pointer'
+                                    to={`/chia-se/${item.directory}`}    
+                                >
+                                    <img src={item.imgURL} alt="blog" className='blog-image h-60 w-1/4 object-cover rounded-lg mx-2'/>
+                                    <div className='description'>
+                                        <p className='font-bold text-3xl mb-3'>{item.title}</p>
+                                        <p className='font-semibold text-base text-blue-500 mb-1.5'>{item.author}</p>
+                                        <p className='font-normal text-base mb-2'>{item.description}</p>
+                                        <p className='text-slate-500'>{item.date}</p>
+                                    </div>
+                                </NavLink>
+                            )
                         })}
                     </div>
                 </div>

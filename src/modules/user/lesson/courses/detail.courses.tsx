@@ -27,16 +27,16 @@ const Detail = () => {
   // console.log(userId)
   return (
     <main className='mt-24 flex bg-color-3'>
-      <section className='w-1/5'>
+      <section className='w-80'>
         {coursesList.map((item) => {
           if (item.name === userId.id) {
             return (
               <section className="list bg-color-3 pl-4 pt-4 text-white">
-                <div className='overflow-y-auto h-96 pr-4'>
+                <div className='overflow-y-auto pr-4' id="scroll" style={{"height": "700px"}}>
                   {item.chapter.map((chap, index: number) => {
                     return (
                       <ul className='text-sm' key={index}>
-                        <li>
+                        <li className='text-base'>
                           {chap.title}
                         </li>
                         {chap.lesson.map((lesson) => {
@@ -47,9 +47,10 @@ const Detail = () => {
                                   to={`/tutorial/${userId.id}${lesson.directory}`}
                                   onClick={() => {
                                     changeFan(chap.title),
-                                      changeBee(lesson.subtitle)
+                                    changeBee(lesson.subtitle)
                                   }
                                   }
+                                  className='text-base'
                                 >
                                   {lesson.subtitle}
                                 </NavLink>
@@ -66,7 +67,7 @@ const Detail = () => {
           }
         })}
       </section>
-      <section>
+      <section className='' style={{ width: 'calc(100% - 320px)' }}>
         {coursesList.map((item) => {
           return (
             <div>

@@ -8,6 +8,7 @@ import Share from "./share/page.share";
 import Qa from "./ques-ans/page.qa";
 // import LessonRoutes from "./lesson/lesson.routes";
 import Detail from "./lesson/courses/detail.courses";
+import Blog from "./share/share.newfeed/blog";
 
 const UserRoutes = () => {
     return (
@@ -22,7 +23,8 @@ const UserRoutes = () => {
                     <Route path="/tutorial" element={<Tutorial />} />
                     <Route path="/tutorial/:id" element={<Detail />} />
                     <Route path="/tutorial/:id/:lesson" element={<Detail />} />
-                    <Route path="/chia-se" element={<Share />} />
+                    <Route path="/chia-se/" element={<Share />} />
+                    <Route path="/chia-se/:id" element={<Blog />} />
                     <Route path="/hoi-dap" element={<Qa />} />
                 </Routes>
             </div>
